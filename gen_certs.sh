@@ -45,3 +45,6 @@ openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in server_from_intermedi
 openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in server_from_root.key -out server_from_root.key.pkcs8
 openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in client_from_intermediate.key -out client_from_intermediate.key.pkcs8
 openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in client_from_root.key -out client_from_root.key.pkcs8
+
+# cleanup csr, we don't need them
+rm -rf *.csr
